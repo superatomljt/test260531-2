@@ -1,0 +1,156 @@
+/* 기본 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* 컨트롤 패널 레이아웃 */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.select-group {
+    display: flex;
+    gap: 10px;
+}
+
+.region-select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    color: #2c3e50;
+    background-color: #fdfdfd;
+}
+
+.region-select:focus {
+    border-color: #3498db;
+}
+
+.check-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #8e44ad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.check-button:hover {
+    background-color: #732d91;
+}
+
+.check-button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+header p {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* 날씨 정보 스타일 */
+.main-weather {
+    margin-bottom: 35px;
+}
+
+.temperature {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #2980b9;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.celsius {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.weather-status {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #34495e;
+    margin-top: 15px;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ecf0f1;
+    padding-top: 20px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.detail-item .label {
+    font-size: 0.8rem;
+    color: #95a5a6;
+    margin-bottom: 5px;
+}
+
+.detail-item .value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 20px;
+    padding: 10px;
+    background: #fadbd8;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
