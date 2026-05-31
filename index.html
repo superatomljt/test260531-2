@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산 상세 동네 날씨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-card">
+        <header>
+            <h1>📍 부산광역시 상세 날씨</h1>
+            
+            <div class="control-panel">
+                <div class="select-group">
+                    <select id="gu-select" class="region-select"></select>
+                    <select id="dong-select" class="region-select"></select>
+                </div>
+                <button id="check-btn" class="check-button">조회</button>
+            </div>
+
+            <p id="time-display">지역을 선택하고 조회를 눌러주세요.</p>
+        </header>
+        
+        <div class="main-weather">
+            <div class="temperature">
+                <span id="temp">--</span><span class="celsius">°C</span>
+            </div>
+            <div class="weather-status" id="status">대기 중</div>
+        </div>
+
+        <div class="weather-details">
+            <div class="detail-item">
+                <span class="label">습도</span>
+                <span class="value" id="humidity">--%</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">풍속</span>
+                <span class="value" id="wind">-- m/s</span>
+            </div>
+            <div class="detail-item">
+                <span class="label">1시간 강수량</span>
+                <span class="value" id="rain">-- mm</span>
+            </div>
+        </div>
+
+        <div id="error-message" class="error hidden"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
